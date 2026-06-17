@@ -265,3 +265,111 @@ nav a:hover {
         display: none; /* Pode criar um menu hambúrguer depois */
     }
 }
+
+/* Estilos da Seção Sobre */
+.about {
+    padding: 100px 10% 80px;
+    background-color: var(--bg-color); /* Mantém o azul clarinho */
+}
+
+.about-badge {
+    display: inline-block;
+    background-color: #fff;
+    border: 2px solid var(--text-dark);
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    box-shadow: 4px 4px 0px var(--text-dark);
+}
+
+.about-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+    max-width: 800px;
+}
+
+.gradient-text {
+    color: var(--primary-red);
+    /* Se quiser o efeito degradê da imagem: */
+    background: linear-gradient(90deg, #FF4A6B, #FF823A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr; /* Texto um pouco mais largo que os cards */
+    gap: 80px;
+    align-items: start;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+}
+
+.about-text strong {
+    color: var(--text-dark);
+    font-weight: 700;
+}
+
+/* Container de Cards */
+.stats-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-card {
+    border: 3px solid var(--text-dark);
+    border-radius: 20px;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 120px;
+    box-shadow: 8px 8px 0px var(--text-dark);
+    transition: transform 0.2s;
+}
+
+.stat-card:hover {
+    transform: translate(-2px, -2px);
+    box-shadow: 10px 10px 0px var(--text-dark);
+}
+
+/* Cores dos Cards baseadas no design */
+.stat-card.yellow { background-color: #FFC93C; }
+.stat-card.pink { background-color: #FF4A6B; }
+.stat-card.green { background-color: #B2F5EA; } /* Verde água/menta */
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--text-dark);
+}
+
+.stat-label {
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: 'Fira Code', monospace;
+    color: var(--text-dark);
+}
+
+/* Responsividade */
+@media (max-width: 968px) {
+    .about-container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    .about-title {
+        font-size: 2.5rem;
+    }
+    .stats-container {
+        max-width: 400px;
+    }
+}
